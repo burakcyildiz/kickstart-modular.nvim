@@ -31,9 +31,9 @@ vim.keymap.set('n', '<C-l>', '<C-w>l', { desc = 'Move focus to the right window'
 vim.keymap.set('n', '<C-j>', '<C-w>j', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w>k', { desc = 'Move focus to the upper window' })
 
-vim.keymap.set('n', '<leader>wv', '<C-w>v', { desc = 'Split window vertically' })
-vim.keymap.set('n', '<leader>wh', '<C-w>s', { desc = 'Split window horizontally' })
-vim.keymap.set('n', '<leader>wq', '<C-w>q', { desc = 'Close a window' })
+vim.keymap.set('n', '<leader>wv', '<C-w>v', { desc = '[W]orkspace split [V]ertically' })
+vim.keymap.set('n', '<leader>wh', '<C-w>s', { desc = '[W]orkspace [S]plit' })
+vim.keymap.set('n', '<leader>wq', '<C-w>q', { desc = '[W]orkspace [Q]uit window' })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
