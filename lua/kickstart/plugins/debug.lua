@@ -23,12 +23,18 @@ return {
 
     -- Add your own debuggers here
     'leoluz/nvim-dap-go',
+    {
+      'mrcjkb/rustaceanvim',
+      version = '^5', -- Recommended
+      lazy = false, -- This plugin is already lazy
+    },
   },
   keys = function(_, keys)
     local dap = require 'dap'
     local dapui = require 'dapui'
     return {
       -- Basic debugging keymaps, feel free to change to your liking!
+      { '<F8>', dap.terminate, desc = 'Debug: Stop' },
       { '<F5>', dap.continue, desc = 'Debug: Start/Continue' },
       { '<F1>', dap.step_into, desc = 'Debug: Step Into' },
       { '<F2>', dap.step_over, desc = 'Debug: Step Over' },
@@ -64,6 +70,7 @@ return {
       ensure_installed = {
         -- Update this to ensure that you have the debuggers for the langs you want
         'delve',
+        'codelldb',
       },
     }
 

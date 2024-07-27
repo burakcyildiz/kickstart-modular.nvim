@@ -14,6 +14,7 @@ return {
     { '\\', ':Neotree reveal<CR>', desc = 'NeoTree reveal' },
   },
   opts = {
+    close_if_last_window = true,
     window = {
       mappings = {
         ['[b'] = 'prev_source',

@@ -142,6 +142,31 @@ return {
             })
           end
 
+          -- Show diagnostics on hover, unless there is another float open
+          vim.api.nvim_create_autocmd({ 'CursorHold' }, {
+            pattern = '*',
+            callback = function()
+              -- Loop through the open hover windows
+              for _, winid in pairs(vim.api.nvim_tabpage_list_wins(0)) do
+                -- If any has a zindex (ie, is a float) then do not show diagnostics
+                if vim.api.nvim_win_get_config(winid).zindex then
+                  return
+                end
+              end
+              -- Show diagnostics in float
+              vim.diagnostic.open_float {
+                scope = 'cursor',
+                focusable = false,
+                close_events = {
+                  'CursorMoved',
+                  'CursorMovedI',
+                  'BufHidden',
+                  'WinLeave',
+                },
+              }
+            end,
+          })
+
           -- The following code creates a keymap to toggle inlay hints in your
           -- code, if the language server you are using supports them
           --
@@ -174,7 +199,7 @@ return {
         clangd = {},
         gopls = {},
         pyright = {},
-        rust_analyzer = {},
+        -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
