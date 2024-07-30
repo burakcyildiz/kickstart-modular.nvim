@@ -5,4 +5,5 @@
 return {
   'https://github.com/mbbill/undotree',
   'https://github.com/tpope/vim-fugitive',
+  'mrjones2014/smart-splits.nvim',
 }

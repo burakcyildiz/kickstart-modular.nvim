@@ -27,10 +27,10 @@ vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 --  Use CTRL+<hjkl> to switch between windows
 --
 --  See `:help wincmd` for a list of all window commands
-vim.keymap.set('n', '<leader>wh', '<C-w>h', { desc = '[W]orkspace move focus to the left window' })
-vim.keymap.set('n', '<leader>wl', '<C-w>l', { desc = '[W]orkspace move focus to the right window' })
-vim.keymap.set('n', '<leader>wj', '<C-w>j', { desc = '[W]orkspace move focus to the down window' })
-vim.keymap.set('n', '<leader>wk', '<C-w>k', { desc = '[W]orkspace move focus to the up window' })
+-- vim.keymap.set('n', '<leader>wh', '<C-w>h', { desc = '[W]orkspace move focus to the left window' })
+-- vim.keymap.set('n', '<leader>wl', '<C-w>l', { desc = '[W]orkspace move focus to the right window' })
+-- vim.keymap.set('n', '<leader>wj', '<C-w>j', { desc = '[W]orkspace move focus to the down window' })
+-- vim.keymap.set('n', '<leader>wk', '<C-w>k', { desc = '[W]orkspace move focus to the up window' })
 
 -- Workspace window splits
 vim.keymap.set('n', '<leader>wv', '<C-w>v', { desc = '[W]orkspace split [V]ertically' })
@@ -59,8 +59,8 @@ vim.keymap.set('v', '<leader>d', '"_d')
 vim.keymap.set('n', 'Q', '<nop>')
 
 -- Quickfix menu navigation
-vim.keymap.set('n', '<C-k>', '<cmd>cnext<CR>zz')
-vim.keymap.set('n', '<C-j>', '<cmd>cprev<CR>zz')
+vim.keymap.set('n', '<leader>qk', '<cmd>cnext<CR>zz')
+vim.keymap.set('n', '<leader>qj', '<cmd>cprev<CR>zz')
 vim.keymap.set('n', '<leader>k', '<cmd>lnext<CR>zz')
 vim.keymap.set('n', '<leader>j', '<cmd>lprev<CR>zz')
 
