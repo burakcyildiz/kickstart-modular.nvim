@@ -48,7 +48,7 @@ vim.opt.signcolumn = 'yes'
 vim.opt.updatetime = 50
 
 -- Color column
-vim.opt.colorcolumn = '100'
+-- vim.opt.colorcolumn = '100'
 
 -- Decrease mapped sequence wait time
 -- Displays which-key popup sooner
